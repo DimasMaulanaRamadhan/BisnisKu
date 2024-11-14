@@ -1,0 +1,145 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background for Section */
+#harga {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background: #ffffff;
+}
+
+/* Section Title Styling */
+#harga h2 {
+    color: #2d3748;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+#harga h2::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 0.25rem;
+    background: #764ba2;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+/* Card Styling */
+#harga .flex-col {
+    width: 100%;
+    max-width: 450px; /* Menyamakan ukuran kedua kartu */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Menambahkan jarak antar kartu */
+}
+
+#harga .flex-col:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header and Plan Name */
+#harga .flex-1 {
+    background: #f3f4f6;
+    color: #764ba2;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 2px solid #667eea;
+}
+
+#harga ul li {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+#harga ul li:not(:last-child) {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Price and Button Styling */
+#harga .text-4xl {
+    color: #764ba2;
+}
+
+#harga button {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(118, 75, 162, 0.3);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#harga button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(118, 75, 162, 0.5);
+}
+
+/* Flex Container for Centering Cards */
+#harga .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.border-gradient-b {
+    position: relative;
+    padding-bottom: 2.5rem; /* Sesuaikan agar tidak terpotong */
+}
+
+.border-gradient-b::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Ketebalan border */
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+/* Memperkecil padding pada button Sign Up */
+button.hover\:underline.gradient {
+    padding: 0.75rem 1.5rem; /* Kurangi padding vertikal dan horizontal */
+    font-size: 1rem; /* Sesuaikan ukuran font agar proporsional */
+}
+
+/* Memperluas padding pada bagian fitur "Thing" */
+ul.text-center.text-sm li {
+    padding: 1.5rem 0; /* Perluas padding untuk kenyamanan membaca */
+}
+
+/* Tambahkan efek hover dan animasi pada menu item */
+.menu-item {
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    font-weight: bold; /* Membuat teks tebal */
+    color: #000000; /* Ubah warna teks saat hover */
+    transform: scale(1.2); /* Efek zoom in */
+    transition: color 0.5s, transform 0.5s ease-in-out; /* Animasi transisi */
+}
+
+/* Gaya dasar ikon profil */
+.profile-icon img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animasi saat hover */
+.profile-icon:hover img {
+    transform: scale(1.2); /* Sedikit membesarkan ikon */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+}

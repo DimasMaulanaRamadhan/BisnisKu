@@ -72,8 +72,8 @@
                 id="nav-content">
                 <ul class="list-reset lg:flex justify-end flex-1 items-center">
                     <li class="mr-3">
-                        <a class="menu-item inline-block py-2 px-4 text-black no-underline"
-                            href="#about">Tentang Kami</a>
+                        <a class="menu-item inline-block py-2 px-4 text-black no-underline" href="#about">Tentang
+                            Kami</a>
                     </li>
                     <li class="mr-3">
                         <a class="menu-item inline-block text-black no-underline py-2 px-4" href="#fitur">Fitur</a>
@@ -82,10 +82,10 @@
                         <a class="menu-item inline-block text-black no-underline py-2 px-4" href="#harga">Harga</a>
                     </li>
                 </ul>
-                <button id="navAction" onclick="window.location.href='{{ url('/home') }}'"
-                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                    Berlangganan
-                </button>
+                <!-- Profile Icon -->
+                <a href="#profile" class="profile-icon inline-block py-2 px-4 text-gray-800 hover:text-gray-600">
+                    <img src="{{ url('assets/img/profil.png') }}" alt="Profile" class="h-8 w-8 rounded-full">
+                </a>
             </div>
         </div>
         <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -93,24 +93,22 @@
     <!--Hero-->
     <div class="pt-24">
         <div class="container px-7 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-            <!--Left Col-->
+            <!-- Greeting Col -->
             <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
                 style="padding-left: 7rem">
-                <p class="uppercase tracking-loose w-full">Apa Bisnis Anda?</p>
-                <h1 class="my-4 text-5xl font-bold leading-tight">
-                    Solusi Cerdas untuk Keuangan dan Promosi UMKM!
-                </h1>
-                <p class="leading-normal text-2xl mb-8">
-                    Kelola transaksi dan promosi secara otomatis dan efisien dalam satu platform.
-                </p>
-                <button onclick="window.location.href='{{ url('/home') }}'"
-                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                    Jelajahi Fitur Premium
+                <p class="uppercase tracking-loose w-full">Selamat Datang!</p>
+                <h1 class="my-4 text-5xl font-bold leading-tight">Hai User,</h1>
+                <p class="leading-normal text-2xl mb-8">Nikmati kemudahan dan keunggulan fitur premium kami untuk kelola
+                    bisnis lebih maksimal.</p>
+                <button
+                    class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    Berlangganan
                 </button>
             </div>
-            <!--Right Col-->
+            <!-- Right Col with Image -->
             <div class="w-full md:w-3/5 py-6 text-center">
-                <img class="w-full md:w-4/5 ml-20 z-50" src="{{ url('assets/img/hero.png') }}" />
+                <img class="w-full md:w-4/5 ml-20 z-50" src="{{ url('assets/img/hero.png') }}"
+                    alt="Welcome Illustration">
             </div>
         </div>
     </div>
@@ -589,7 +587,7 @@
                     <a class="text-blue-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
                         href="#">
                         <!--Icon from: http://www.potlabicons.com/ -->
-                        <img src="{{ url('assets/img/logo.png') }}" alt="Logo" class="inline h-16 w-16"
+                        <img src="{{ url('assets/img/logo.png') }}" alt="" class="inline h-16 w-16"
                             style="vertical-align: middle;">
                         Bisnisku
                     </a>
@@ -666,49 +664,41 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   -->
     <script>
-        var scrollpos = window.scrollY;
-        var header = document.getElementById("header");
-        var navcontent = document.getElementById("nav-content");
-        var navaction = document.getElementById("navAction");
-        var brandname = document.getElementById("brandname");
-        var toToggle = document.querySelectorAll(".toggleColour");
+        document.addEventListener("DOMContentLoaded", function() {
+            var scrollpos = window.scrollY;
+            var header = document.getElementById("header");
+            var navcontent = document.getElementById("nav-content");
+            var brandname = document.getElementById("brandname");
+            var toToggle = document.querySelectorAll(".toggleColour");
 
-        document.addEventListener("scroll", function() {
-            /*Apply classes for slide in bar*/
-            scrollpos = window.scrollY;
+            document.addEventListener("scroll", function() {
+                scrollpos = window.scrollY;
 
-            if (scrollpos > 10) {
-                header.classList.add("bg-white");
-                navaction.classList.remove("bg-white");
-                navaction.classList.add("gradient");
-                navaction.classList.remove("text-gray-800");
-                navaction.classList.add("text-white");
-                //Use to switch toggleColour colours
-                for (var i = 0; i < toToggle.length; i++) {
-                    toToggle[i].classList.add("text-gray-800");
-                    toToggle[i].classList.remove("text-white");
+                if (scrollpos > 10) {
+                    header.classList.add("bg-white", "shadow");
+                    navcontent.classList.remove("bg-gray-100");
+                    navcontent.classList.add("bg-white");
+
+                    // Mengubah warna elemen dengan kelas toggleColour
+                    for (var i = 0; i < toToggle.length; i++) {
+                        toToggle[i].classList.add("text-gray-800");
+                        toToggle[i].classList.remove("text-white");
+                    }
+                } else {
+                    header.classList.remove("bg-white", "shadow");
+                    navcontent.classList.remove("bg-white");
+                    navcontent.classList.add("bg-gray-100");
+
+                    // Kembalikan warna elemen dengan kelas toggleColour
+                    for (var i = 0; i < toToggle.length; i++) {
+                        toToggle[i].classList.add("text-white");
+                        toToggle[i].classList.remove("text-gray-800");
+                    }
                 }
-                header.classList.add("shadow");
-                navcontent.classList.remove("bg-gray-100");
-                navcontent.classList.add("bg-white");
-            } else {
-                header.classList.remove("bg-white");
-                navaction.classList.remove("gradient");
-                navaction.classList.add("bg-white");
-                navaction.classList.remove("text-white");
-                navaction.classList.add("text-gray-800");
-                //Use to switch toggleColour colours
-                for (var i = 0; i < toToggle.length; i++) {
-                    toToggle[i].classList.add("text-white");
-                    toToggle[i].classList.remove("text-gray-800");
-                }
-
-                header.classList.remove("shadow");
-                navcontent.classList.remove("bg-white");
-                navcontent.classList.add("bg-gray-100");
-            }
+            });
         });
     </script>
+
     <script>
         /*Toggle dropdown list*/
         /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
