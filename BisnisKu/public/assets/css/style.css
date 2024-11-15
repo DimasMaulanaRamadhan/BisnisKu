@@ -46,6 +46,12 @@ html {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Menonaktifkan transformasi dan transisi */
+.no-transform {
+    transform: none !important;
+    transition: none !important;
+}
+
 /* Card Header and Plan Name */
 #harga .flex-1 {
     background: #f3f4f6;
@@ -142,4 +148,47 @@ ul.text-center.text-sm li {
 .profile-icon:hover img {
     transform: scale(1.2); /* Sedikit membesarkan ikon */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+}
+
+/* Card default styling */
+.plan-card {
+    transform: scale(1);
+}
+
+/* Checklist icon */
+.checklist {
+    font-size: 1.5em;
+    color: #4caf50;
+}
+
+/* Selected Basic Card */
+.selected-basic {
+    transform: scale(1.05);
+}
+
+/* Selected Pro Card */
+.selected-pro .pro-card {
+    transform: scale(1.05);
+}
+
+/* Hide Sign Up Button */
+.plan-card .sign-up-button {
+    display: none;
+}
+
+/* Default card style */
+.plan-card {
+    transform: scale(1);
+}
+
+/* Checklist icon style */
+.checklist {
+    font-size: 1.5em;
+    color: #4caf50;
+}
+
+/* Selected Pro Card: Larger and Green Outline */
+.selected-pro {
+    transform: scale(1.1); /* Slightly larger */
+    border: 3px solid #4caf50; /* Green outline */
 }
