@@ -10,6 +10,6 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/dash', function () {
-    return view('dashpremium');
+Route::get('/form', function () {
+    return view('form');
 });

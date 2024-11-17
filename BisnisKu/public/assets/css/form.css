@@ -1,0 +1,291 @@
+/* Multi-step Form */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-bottom: 50px; /* Jarak tambahan di bawah halaman */
+}
+
+html {
+    height: 100%;
+}
+
+p {
+    color: grey;
+}
+
+#heading {
+    text-transform: uppercase;
+    color: #608bc1;
+    font-weight: normal;
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-card {
+    text-align: left;
+}
+
+/* Card Container untuk Form Multi-step */
+.card-container {
+    width: 70%; /* Sesuaikan dengan ukuran yang diinginkan */
+    margin: 50px auto; /* Memberikan jarak atas (50px) dan horizontal rata tengah */
+    padding: 20px; /* Jarak konten dari tepi card */
+    background-color: white; /* Warna latar belakang card */
+    border-radius: 10px; /* Membuat sudut card melengkung */
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3); /* Shadow lebih gelap */
+    position: relative; /* Posisi relatif untuk shadow */
+}
+
+/* Multi-step Form */
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    width: 100%; /* Pastikan form mengikuti lebar card */
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#msform input,
+#msform textarea {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    color: #2c3e50;
+    background-color: #eceff1;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #608bc1;
+    outline-width: 0;
+}
+
+#msform .action-button {
+    width: 100px;
+    background: #608bc1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right;
+    transition: background 0.3s ease-in-out;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: #4f77a3;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #9e9e9e;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right;
+    transition: background 0.3s ease-in-out;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    background-color: #757575;
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative;
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #608bc1;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.purple-text {
+    color: #608bc1;
+    font-weight: normal;
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right;
+}
+
+.fieldlabels {
+    color: #555555;
+    text-align: left;
+}
+
+/* Form Card Styling */
+.form-card label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Styling untuk Grup Checkbox */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Jarak antar elemen checkbox */
+    margin-bottom: 20px; /* Jarak ke bawah */
+    align-items: flex-start; /* Pastikan semua elemen di dalam grup diratakan ke kiri */
+}
+
+
+/* CSS untuk mengatur ukuran teks dan membuatnya bold */
+.checkbox-item p {
+    font-size: 1em; /* Mengubah ukuran font */
+    margin: 0; /* Menghilangkan margin default */
+    color: black;
+}
+
+/* CSS untuk mengatur ukuran checkbox */
+.checkbox-item input[type="checkbox"] {
+    width: 20px; /* Mengatur lebar checkbox */
+    height: 20px; /* Mengatur tinggi checkbox */
+    transform: scale(1.2); /* Memperbesar checkbox */
+    margin-right: 10px; /* Menambahkan jarak antara checkbox dan label */
+    cursor: pointer; /* Mengubah kursor saat hover */
+}
+
+/* CSS untuk tabel */
+table {
+    width: 100%; /* Mengatur lebar tabel */
+    border-collapse: collapse; /* Menghilangkan jarak antara sel */
+}
+
+td {
+    padding: 10px; /* Menambahkan padding di dalam sel */
+    text-align: left; /* Mengatur teks ke kiri */
+}
+
+.checkbox-group .checkbox-item {
+    align-items: center; /* Menyejajarkan checkbox dengan teks secara vertikal */
+    gap: 10px; /* Jarak antara checkbox dan teks */
+    width: 100%; /* Mengisi lebar penuh, sehingga teks akan tetap rata kiri */
+    justify-content: flex-start; /* Pastikan teks dan checkbox mulai dari kiri */
+}
+
+/* Memperbesar Checkbox */
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Styling untuk Input Tambahan */
+.checkbox-group input[type="text"] {
+    flex: 1; /* Agar input teks menyesuaikan lebar sisa */
+    margin-left: 0; /* Hilangkan margin kiri */
+    width: 100%; /* Pastikan input teks memenuhi lebar penuh */
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+}
+
+#progressbar .active {
+    color: #608bc1;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400;
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+}
+
+#progressbar li:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #608bc1;
+}
+
+.progress {
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    background-color: #608bc1;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
