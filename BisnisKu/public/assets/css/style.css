@@ -24,7 +24,7 @@ html {
     display: block;
     width: 5rem;
     height: 0.25rem;
-    background: #764ba2;
+    background: #133e87;
     margin: 1rem auto;
     border-radius: 10px;
 }
@@ -55,12 +55,12 @@ html {
 /* Card Header and Plan Name */
 #harga .flex-1 {
     background: #f3f4f6;
-    color: #764ba2;
+    color: #133e87;
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
     padding: 1.5rem;
-    border-bottom: 2px solid #667eea;
+    border-bottom: 2px solid #608bc1;
 }
 
 #harga ul li {
@@ -74,11 +74,11 @@ html {
 
 /* Price and Button Styling */
 #harga .text-4xl {
-    color: #764ba2;
+    color: #608bc1;
 }
 
 #harga button {
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #133e87, #608bc1, #cbdceb, #f3f3e0);
     color: #ffffff;
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
@@ -90,6 +90,13 @@ html {
 #harga button:hover {
     transform: scale(1.05);
     box-shadow: 0px 6px 14px rgba(118, 75, 162, 0.5);
+}
+
+/* Tambahkan kelas untuk efek border pada teks */
+.border-text {
+    text-shadow: -0.5px -0.5px 0 #000, /* Bayangan atas-kiri */ 0.5px -0.5px 0 #000,
+        /* Bayangan atas-kanan */ -0.5px 0.5px 0 #000,
+        /* Bayangan bawah-kiri */ 0.5px 0.5px 0 #000; /* Bayangan bawah-kanan */
 }
 
 /* Flex Container for Centering Cards */
@@ -112,7 +119,7 @@ html {
     left: 0;
     width: 100%;
     height: 4px; /* Ketebalan border */
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #133e87, #608bc1, #cbdceb, #f3f3e0);
     border-radius: 2px;
 }
 

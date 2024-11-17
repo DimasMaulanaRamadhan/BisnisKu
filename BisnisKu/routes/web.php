@@ -13,3 +13,7 @@ Route::get('/home', function () {
 Route::get('/form', function () {
     return view('form');
 });
+
+Route::get('/konsultasi', function () {
+    return view('konsultasi');
+});
