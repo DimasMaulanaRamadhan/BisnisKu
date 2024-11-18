@@ -122,28 +122,28 @@
                                 <div class="form-card">
                                     <h2 class="fs-title">Informasi Pribadi</h2>
                                     <label class="fieldlabels">Nama Lengkap:</label>
-                                    <input type="text" name="fullname" placeholder="Nama Lengkap" required>
+                                    <input type="text" name="fullname" placeholder="Nama Lengkap">
 
                                     <label class="fieldlabels">Email:</label>
-                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="email" name="email" placeholder="Email">
 
                                     <label class="fieldlabels">Nomor HP/WhatsApp:</label>
-                                    <input type="text" name="phone" placeholder="Nomor HP/WhatsApp" required>
+                                    <input type="text" name="phone" placeholder="Nomor HP/WhatsApp">
 
                                     <label class="fieldlabels">Nama Usaha/Perusahaan (jika ada):</label>
                                     <input type="text" name="business_name" placeholder="Nama Usaha/Perusahaan">
 
                                     <label class="fieldlabels">Alamat:</label>
-                                    <input type="text" name="address" placeholder="Alamat Lengkap" required>
+                                    <input type="text" name="address" placeholder="Alamat Lengkap">
 
                                     <label class="fieldlabels">Kode Pos:</label>
                                     <input type="text" name="postal_code" placeholder="Kode Pos">
 
                                     <label class="fieldlabels">Kota:</label>
-                                    <input type="text" name="city" placeholder="Kota" required>
+                                    <input type="text" name="city" placeholder="Kota">
 
                                     <label class="fieldlabels">Provinsi:</label>
-                                    <input type="text" name="province" placeholder="Provinsi" required>
+                                    <input type="text" name="province" placeholder="Provinsi">
 
                                     <label class="fieldlabels">Media sosial yang dimiliki (opsional):</label>
                                     <input type="text" name="social_media" placeholder="Media Sosial">
@@ -156,7 +156,7 @@
                                 <div class="form-card">
                                     <h2 class="fs-title">Kebutuhan Website</h2>
                                     <label class="fieldlabels">Jenis Bisnis:</label>
-                                    <input type="text" name="business_type" placeholder="Jenis Bisnis" required>
+                                    <input type="text" name="business_type" placeholder="Jenis Bisnis">
 
                                     <label class="fieldlabels">Target Market/Audience:</label>
                                     <input type="text" name="target_market" placeholder="Target Market">
@@ -288,7 +288,7 @@
                                 <div class="form-card">
                                     <h2 class="fs-title">Timeline</h2>
                                     <label class="fieldlabels">Timeline Pengerjaan:</label>
-                                    <select name="timeline" required>
+                                    <select name="timeline">
                                         <option value="1-2 minggu">1-2 minggu</option>
                                         <option value="2-4 minggu">2-4 minggu</option>
                                         <option value="1-2 bulan">1-2 bulan</option>
@@ -296,7 +296,7 @@
                                     </select>
 
                                     <label class="fieldlabels mt-4">Prioritas:</label>
-                                    <select name="priority" required>
+                                    <select name="priority">
                                         <option value="Kualitas premium">Kualitas premium</option>
                                         <option value="Waktu pengerjaan cepat">Waktu pengerjaan cepat</option>
                                     </select>
@@ -315,13 +315,14 @@
                                             <tr>
                                                 <td>
                                                     <div class="checkbox-item">
-                                                        <p style="font-size: 1.05em; margin-top: -4%; margin-left: -1.7%;">Saya setuju dengan syarat dan ketentuan yang berlaku.</p>
+                                                        <p
+                                                            style="font-size: 1.05em; margin-top: -4%; margin-left: -1.7%;">
+                                                            Saya setuju dengan syarat dan ketentuan yang berlaku.</p>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="checkbox-item">
-                                                        <input type="checkbox" name="terms"
-                                                            value="Ketentuan">
+                                                        <input type="checkbox" name="terms" value="Ketentuan">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -338,7 +339,6 @@
             </div>
         </div>
     </div>
-
 
     <script>
         $(document).ready(function() {
@@ -424,6 +424,98 @@
                 return false;
             })
 
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("msform"); // Ambil elemen formulir berdasarkan ID
+
+            if (form) { // Pastikan formulir ditemukan
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault(); // Mencegah pengiriman form secara default
+
+                    // Sembunyikan formulir
+                    this.style.display = "none";
+
+                    // Tampilkan pesan sukses
+                    const successMessage = `
+                    <!--Nav-->
+                    <nav id="header" class="fixed w-full z-30 top-0 text-white -mt-6">
+                        <div class="w-full mx-auto max-w-none flex flex-wrap items-center justify-between"
+                            style="padding-left: 1.5%; padding-right: 1.5%;">
+                            <div class="flex items-center" style="padding-top: 2.5%;">
+                                <a id="brandname"
+                                    class="toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                                    href="#">
+                                    <img src="{{ url('assets/img/logo.png') }}" alt="Logo" class="inline h-20 w-20"
+                                        style="vertical-align: middle; margin-bottom: 2.5%;">
+                                    BisnisKu
+                                </a>
+                            </div>
+                            <div class="block lg:hidden pr-4">
+                                <button id="nav-toggle"
+                                    class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                    <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <title>Menu</title>
+                                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:mt-0 bg-white lg:bg-transparent text-black lg:p-0 z-20"
+                                id="nav-content">
+                                <ul class="list-reset lg:flex justify-end flex-1 items-center" style="padding-top: 4%">
+                                    <li class="mr-2">
+                                        <a class="menu-item inline-block py-2 px-4 text-black no-underline" href="#about">Tentang
+                                            Kami</a>
+                                    </li>
+                                    <li class="mr-2">
+                                        <a class="menu-item inline-block text-black no-underline py-2 px-4" href="#fitur">Fitur</a>
+                                    </li>
+                                    <li class="mr-2">
+                                        <a class="menu-item inline-block text-black no-underline py-2 px-4" href="#harga">Harga</a>
+                                    </li>
+                                </ul>
+                                <!-- Profile Icon -->
+                                <a href="#profile" class="profile-icon inline-block py-2 px-4 text-gray-800 hover:text-gray-600"
+                                    style="margin-top: 2.5%">
+                                    <img src="{{ url('assets/img/profil.png') }}" alt="Profile" class="h-8 w-8 rounded-full">
+                                </a>
+                            </div>
+                        </div>
+                        <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+                    </nav>
+                    <div style="text-align: center; padding: 20px; font-family: 'Arial', sans-serif; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3); max-width: 600px; margin: 50px auto; margin-top: 15%;">
+                        <h2 style="color: #608bc1; font-size: 1.8em; margin-bottom: 10px;">Formulir Berhasil Dikirim!</h2>
+                        <p style="color: #333; font-size: 1em; margin-bottom: 20px;">Terima kasih telah mengisi formulir. Kami akan segera menghubungi Anda.</p>
+                        <div style="margin-top: 20px;">
+                            <button id="btnHome"
+                                style="background-color: #608bc1; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; margin-right: 10px; font-weight: bold; transition: background 0.3s ease-in-out;">
+                                Kembali ke Beranda
+                            </button>
+                            <button id="btnConsultation"
+                                style="background-color: #4b73a3; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; font-weight: bold; transition: background 0.3s ease-in-out;">
+                                Jadwalkan Konsultasi
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                    // Gantikan konten halaman dengan pesan sukses
+                    document.body.innerHTML = successMessage;
+
+                    // Tambahkan event listener untuk tombol
+                    document.getElementById("btnHome").addEventListener("click", function() {
+                        window.location.href = "/home"; // Arahkan ke halaman utama
+                    });
+
+                    document.getElementById("btnConsultation").addEventListener("click", function() {
+                        window.location.href =
+                            "/konsultasi"; // Arahkan ke halaman konsultasi
+                    });
+                });
+            } else {
+                console.error("Form with ID 'msform' not found.");
+            }
         });
     </script>
     <script>

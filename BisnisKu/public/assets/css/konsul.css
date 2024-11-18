@@ -1,0 +1,229 @@
+/* Reset dan gaya dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f8fc;
+    color: #333;
+}
+
+h1,
+h2 {
+    color: #133e87;
+}
+
+/* Kontainer */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #608bc1;
+    outline: none;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+.info {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Tombol */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    font-size: 0.8em;
+    background: linear-gradient(90deg, #133e87, #608bc1, #cbdceb);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.button-group button:hover {
+    background: linear-gradient(90deg, #608bc1, #133e87);
+    transform: scale(1.05);
+}
+
+/* Preview */
+.preview {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9fbff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.preview h3 {
+    margin-bottom: 10px;
+    color: #133e87;
+}
+
+/* Kebijakan */
+.policy {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+body {
+    font-family: "Public Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 700;
+    color: #133e87;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+p,
+label,
+small {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #333;
+}
+
+a.menu-item {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+a.menu-item:hover {
+    color: #133e87;
+}
+
+button {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Background overlay */
+.alert-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Hidden class to hide the dialog */
+.hidden {
+    display: none;
+}
+
+/* Alert content box */
+.alert-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Alert icon */
+.alert-icon {
+    font-size: 50px;
+    color: #e74c3c; /* Warna merah untuk ikon error */
+    margin-bottom: 20px;
+}
+
+/* Alert title */
+.alert-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Alert message */
+.alert-message {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Alert button */
+.alert-button {
+    background: #3085d6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.alert-button:hover {
+    background: #2868b0;
+}
