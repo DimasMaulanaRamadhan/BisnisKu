@@ -116,14 +116,14 @@
 
             <!-- Right Col: Hero Image -->
             <div class="w-full md:w-3/5 py-6 text-center">
-                <img class="w-full md:w-3/4 lg:w-4/5 mx-auto md:mx-0" style="margin-left: 6rem" src="{{ url('assets/img/hero.png') }}"
+                <img class="w-full md:w-3/4 lg:w-4/5 mx-auto md:mx-0" style="margin-left: 6rem; width:500%" src="{{ url('assets/img/hero.png') }}"
                     alt="Welcome Illustration">
             </div>
         </div>
     </div>
 
     </div>
-    <div class="relative -mt-12 lg:-mt-24">
+    <div class="relative -mt-12 lg:-mt-40">
         <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -155,16 +155,15 @@
                 <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
             </div>
             <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/rvXPkxtbfvk"
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/b_rlahflEhU?start=23"
                     frameborder="0" allowfullscreen>
                 </iframe>
                 <br>
-                <p style="color: grey; font-size: 16px; text-align: center; margin-top: 10px; ">
-                    BisnisKu adalah website yang membantu pemilik usaha dalam membuat toko onlinenya sendiri dengan
+                <p style="color: grey; font-size: 20px; text-align: center; margin-top: 10px; ">
+                    BisnisKu adalah website yang membantu pemilik usaha untuk membuat toko online lengkap dengan sistem manjaemen keuangan dan inventaris
                     menggunakan Shopify.
-                    Disini kami menawarkan 2 layanan yaitu reguler dan premium, yang dirancang untuk memenuhi kebutuhan
-                    toko online anda.
-                    Dengan dukungan kami, anda dapat mempunyai toko online sendiri dan dapat bersaing di era digital.
+                    Kami menawarkan 2 layanan yaitu <b>reguler</b> dan <b>premium</b> untuk membantu Anda membangun toko online Anda
+                    Bersama Kami, wujudkan impian Anda menjadi kenyataan!
                 </p>
             </div>
         </div>
@@ -263,22 +262,22 @@
             </div>
             <div class="w-full sm:w-1/2 p-6 mt-6">
                 <div class="align-middle">
-                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+                    <h3 class="text-4xl text-gray-800 font-bold leading-none mb-3">
                         Kenapa Memilih BisnisKu?
                     </h3>
                     <br>
                     <a class="text-gray-600 mb-8">
-                        <p>
-                            1. Toko online dibuat mudah dan cepat dalam beberapa langkah.
+                        <p style="font-size: 20px;">
+                            1. Toko online dibuat mudah dan cepat dalam waktu yang singkat.
                             <br>
                             <br>
-                            2. Dapatkan panduan profesional dari desain hingga integrasi fitur.
+                            2. Mendapatkan panduan profesional dari desain hingga integrasi fitur.
                             <br>
                             <br>
                             3. Solusi berkualitas dengan biaya terjangkau untuk UMKM.
                             <br>
                             <br>
-                            4. Akses fitur lengkap dari platform e-commerce terbaik, Shopify.
+                            4. Akses fitur lengkap dari platform e-commerce terbaik, yaitu Shopify.
 
                         </p>
                         <br />

@@ -14,9 +14,9 @@ Route::get('/form', function () {
     return view('form');
 });
 
-Route::get('register', function () {
+Route::get('/masuk', function () {
     return view('register');
-});
+})-> name('masuk');
 
 Route::get('/konsultasi', function () {
     return view('konsultasi');
