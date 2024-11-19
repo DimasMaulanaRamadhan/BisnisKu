@@ -31,7 +31,7 @@
                   <i class='bx bxs-lock-alt'></i>
                   <input type="password" placeholder="Confirm password">
                 </div>
-                <button>
+                <button onclick="window.location.href='{{ url('/masuk') }}'">
                   Daftar
                 </button>
                 <p>
@@ -48,7 +48,7 @@
           </div>
           <!-- END SIGN UP -->
           <!-- SIGN IN -->
-          <div class="col align-items-center flex-col sign-in">
+          <div class="col align-items-center flex-col sign-in" id="harga">
             <div class="form-wrapper align-items-center">
               <div class="form sign-in">
                 <div class="input-group">
@@ -59,7 +59,7 @@
                   <i class='bx bxs-lock-alt'></i>
                   <input type="password" placeholder="Password">
                 </div>
-                <button>
+                <button onclick="window.location.href='{{ url('/home') }}'">
                   Masuk
                 </button>
                 <p>

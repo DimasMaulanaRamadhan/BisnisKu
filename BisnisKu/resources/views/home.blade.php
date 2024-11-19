@@ -72,11 +72,8 @@
                 id="nav-content">
                 <ul class="list-reset lg:flex justify-end flex-1 items-center">
                     <li class="mr-3">
-                        <a class="menu-item inline-block py-2 px-4 text-black no-underline" href="#about">Tentang
+                        <a class="menu-item inline-block py-2 px-4 text-black no-underline" href="#tentang_kami">Tentang
                             Kami</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="menu-item inline-block text-black no-underline py-2 px-4" href="#fitur">Fitur</a>
                     </li>
                     <li class="mr-3">
                         <a class="menu-item inline-block text-black no-underline py-2 px-4" href="#harga">Harga</a>
@@ -96,7 +93,7 @@
             <!-- Left Col: Greeting and Buttons -->
             <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left md:pl-16">
                 <p class="uppercase tracking-loose w-full">Selamat Datang!</p>
-                <h1 class="my-4 text-5xl font-bold leading-tight">Hai User,</h1>
+                <h1 class="my-4 text-5xl font-bold leading-tight">Hai User</h1>
                 <p class="leading-normal text-2xl mb-8">
                     Nikmati kemudahan dan keunggulan fitur premium kami untuk kelola bisnis lebih maksimal.
                 </p>
@@ -304,7 +301,7 @@
                 <div class="plan-card basic-card no-transform flex flex-col mx-auto rounded-lg shadow-lg z-10"
                     style="width: 25%; height: 90%; max-width: none; transform: none; transition: none; margin-top: 2%;">
                     <div class="flex-1 text-gray-600 rounded-t overflow-hidden shadow">
-                        <div class="p-8 text-3xl font-bold text-center border-gradient-b">Basic</div>
+                        <div class="p-8 text-3xl font-bold text-center border-gradient-b">Reguler</div>
                         <ul class="w-full text-center text-sm font-bold">
                             <li class="border-b py-4">Formulir untuk pengelolaan ✅ </li>
                             <li class="border-b py-4">Layanan profesional dengan hasil yang optimal ✅</li>
@@ -324,7 +321,7 @@
                 <div class="plan-card pro-card flex flex-col mx-auto rounded-lg shadow-lg z-10 selected-pro"
                     style="width: 33%; height: auto; max-width: none; transform: none; transition: none;">
                     <div class="flex-1 text-gray-600 rounded-t overflow-hidden shadow">
-                        <div class="p-8 text-3xl font-bold text-center border-gradient-b">Pro</div>
+                        <div class="p-8 text-3xl font-bold text-center border-gradient-b">Premium</div>
                         <ul class="w-full text-center text-sm" style="font-size: 0.7em;">
                             <li class="border-b py-4">Formulir untuk pengelolaan ✅</li>
                             <li class="border-b py-4">Layanan profesional dengan hasil yang optimal ✅</li>
